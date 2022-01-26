@@ -4,12 +4,14 @@
     1. Sell that borrowed asset. (Short selling)
 4. Repay everything back
 
-Paraswap,or uniswap...
+Two things needed when working with contract: ABI + address.
 
-Integration test: Kovan
+Examples of using similary programs: Paraswap,or uniswap...
 
-Unit test: Mainnet-fork (we will fork everything, which is on the mainnet, to not doing any oracles mock etc.)
+Integration test: Kovan.
 
-Default tetsting networks = development with mocking
+Unit test: Mainnet-fork (we will fork everything, which is on the mainnet, to not doing any oracles mock etc.).
 
-Mainnet fork for testing = not oracles mock
+Default testing networks (kovan testnet) = development with mocking.
+
+Mainnet fork for testing = not oracles mock.

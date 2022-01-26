@@ -7,8 +7,11 @@ from brownie import (
     interface
 )
 
-FORKED_LOCAL_ENVIRONMENTS = ["mainnet-fork", "mainnet-fork-dev", "rinkeby-fork"]
-LOCAL_BLOCKCHAIN_ENVIROMENTS = ["development", "ganache-local"]
+LOCAL_BLOCKCHAIN_ENVIROMENTS = [
+    "development", 
+    "ganache-local", 
+    "mainnet-fork"
+]
 
 def  get_account(index=None, id=None):
 
@@ -18,10 +21,7 @@ def  get_account(index=None, id=None):
     if id:
         return accounts.load(id)
 
-    if  (
-        network.show_active() in LOCAL_BLOCKCHAIN_ENVIROMENTS or
-        network.show_active() in FORKED_LOCAL_ENVIRONMENTS
-    ):
+    if  network.show_active() in LOCAL_BLOCKCHAIN_ENVIROMENTS:
         return accounts[0]
     
     # this is for remote blockchain
